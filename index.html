@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Layangan Bebeán — Traditional Balinese Craft</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#4b9fc4;
+  --blue-dark:#17607f;
+  --blue-soft:#dff3fa;
+  --blue-pale:#f2fbfd;
+  --white:#ffffff;
+  --text:#17313d;
+  --muted:#64808c;
+  --sand:#d8c5a4;
+  --line:rgba(23,96,127,.13);
+  --shadow:0 18px 50px rgba(23,96,127,.10);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--blue-pale);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+img,video{
+  width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* NAVBAR */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  padding:16px 5%;
+  transition:.3s ease;
+}
+
+.nav-inner{
+  max-width:1150px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:13px 20px;
+  border:1px solid rgba(255,255,255,.55);
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-radius:18px;
+  box-shadow:0 8px 30px rgba(23,96,127,.08);
+}
+
+.logo{
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  color:var(--blue-dark);
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+  font-size:12px;
+  font-weight:600;
+  color:var(--muted);
+}
+
+.nav-links a{
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:var(--blue-dark);
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:130px 6% 90px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(111,196,225,.28),transparent 30%),
+    radial-gradient(circle at 10% 80%,rgba(216,197,164,.18),transparent 25%),
+    linear-gradient(145deg,#f8fdff,#e7f6fb);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:450px;
+  height:450px;
+  border-radius:50%;
+  background:rgba(94,178,210,.10);
+  right:-160px;
+  bottom:-180px;
+}
+
+.hero-content{
+  width:100%;
+  max-width:1150px;
+  margin:auto;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  color:var(--blue-dark);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  max-width:850px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(48px,8vw,94px);
+  line-height:.98;
+  font-weight:600;
+  letter-spacing:-3px;
+  color:#124e68;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero-desc{
+  max-width:600px;
+  margin-top:28px;
+  font-size:15px;
+  color:var(--muted);
+}
+
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:32px;
+}
+
+.pill{
+  padding:8px 14px;
+  border:1px solid rgba(23,96,127,.15);
+  border-radius:100px;
+  background:rgba(255,255,255,.7);
+  color:var(--blue-dark);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+
+.hero-bottom{
+  margin-top:70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  max-width:1000px;
+}
+
+.scroll{
+  font-size:10px;
+  color:var(--muted);
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* GENERAL */
+
+section{
+  padding:100px 6%;
+}
+
+.container{
+  max-width:1050px;
+  margin:auto;
+}
+
+.section-label{
+  font-size:10px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--blue);
+  margin-bottom:13px;
+}
+
+.section-title{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(34px,5vw,55px);
+  line-height:1.1;
+  color:#174f66;
+  margin-bottom:22px;
+}
+
+.section-intro{
+  max-width:680px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* IDENTITY */
+
+.identity{
+  background:white;
+}
+
+.identity-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:45px;
+}
+
+.info-card{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:#fbfeff;
+}
+
+.info-card small{
+  display:block;
+  font-size:9px;
+  letter-spacing:1.8px;
+  color:var(--blue);
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.info-card strong{
+  font-size:14px;
+}
+
+.members{
+  grid-column:1/-1;
+}
+
+.members p{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:5px;
+}
+
+/* PRODUCT */
+
+.product{
+  background:var(--blue-pale);
+}
+
+.product-layout{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:55px;
+  align-items:center;
+}
+
+.product-text p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.price{
+  margin-top:30px;
+  font-family:"Playfair Display",serif;
+  font-size:38px;
+  color:var(--blue-dark);
+}
+
+.product-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+
+.product-visual{
+  position:relative;
+}
+
+.product-visual::before{
+  content:"";
+  position:absolute;
+  inset:-15px;
+  border-radius:30px;
+  background:linear-gradient(135deg,rgba(75,159,196,.15),rgba(216,197,164,.12));
+  z-index:0;
+}
+
+.product-visual img{
+  position:relative;
+  z-index:1;
+  border-radius:25px;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  box-shadow:var(--shadow);
+}
+
+/* CONCEPT */
+
+.concept{
+  background:white;
+}
+
+.concept-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:45px;
+}
+
+.concept-card{
+  padding:30px;
+  min-height:260px;
+  border-radius:22px;
+  background:linear-gradient(145deg,#f7fcfe,#e9f7fb);
+  border:1px solid var(--line);
+}
+
+.number{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.concept-card h3{
+  font-family:"Playfair Display",serif;
+  font-size:25px;
+  margin:22px 0 10px;
+  color:#18526b;
+}
+
+.concept-card p{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* MATERIAL */
+
+.material{
+  background:#f8fcfd;
+}
+
+.material-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-top:45px;
+}
+
+.material-card{
+  padding:27px;
+  border-radius:20px;
+  background:white;
+  border:1px solid var(--line);
+}
+
+.material-card h3{
+  font-size:17px;
+  color:var(--blue-dark);
+  margin-bottom:4px;
+}
+
+.material-card span{
+  font-size:9px;
+  letter-spacing:1.5px;
+  color:var(--blue);
+  font-weight:700;
+}
+
+.material-card p{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:10px;
+}
+
+/* PROCESS */
+
+.process{
+  background:white;
+}
+
+.process-list{
+  margin-top:45px;
+  border-top:1px solid var(--line);
+}
+
+.process-item{
+  display:grid;
+  grid-template-columns:70px 210px 1fr;
+  gap:20px;
+  padding:24px 0;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+}
+
+.process-no{
+  font-size:11px;
+  color:var(--blue);
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.process-item h3{
+  font-size:15px;
+  color:var(--blue-dark);
+}
+
+.process-item p{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* RESULT */
+
+.result{
+  background:
+    radial-gradient(circle at 10% 20%,rgba(75,159,196,.13),transparent 28%),
+    #eef9fc;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
+  margin-top:45px;
+}
+
+.gallery img{
+  height:100%;
+  min-height:300px;
+  object-fit:cover;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+
+.gallery .second{
+  min-height:300px;
+}
+
+.result-note{
+  margin-top:25px;
+  padding:20px 22px;
+  border-left:3px solid var(--blue);
+  background:rgba(255,255,255,.7);
+  border-radius:0 15px 15px 0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* DOCUMENTATION */
+
+.documentation{
+  background:white;
+}
+
+.video-wrap{
+  margin-top:45px;
+  position:relative;
+  overflow:hidden;
+  border-radius:25px;
+  background:#dbeff5;
+  box-shadow:var(--shadow);
+}
+
+.video-wrap video{
+  max-height:650px;
+  object-fit:cover;
+}
+
+/* PACKAGING */
+
+.packaging{
+  background:var(--blue-pale);
+}
+
+.simple-box{
+  margin-top:40px;
+  padding:35px;
+  border-radius:24px;
+  background:white;
+  border:1px solid var(--line);
+}
+
+.simple-box p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ADVANTAGE */
+
+.advantages{
+  background:white;
+}
+
+.advantage-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:40px;
+}
+
+.advantage{
+  padding:18px 20px;
+  border-radius:15px;
+  background:#f1fafc;
+  color:#28637a;
+  font-size:13px;
+  font-weight:600;
+}
+
+.advantage::before{
+  content:"✦";
+  margin-right:10px;
+  color:var(--blue);
+}
+
+/* BUSINESS */
+
+.business{
+  background:
+    linear-gradient(145deg,#edf9fc,#f9fcfd);
+}
+
+.business-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:45px;
+}
+
+.business-card{
+  padding:25px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:20px;
+}
+
+.business-card .num{
+  font-size:10px;
+  letter-spacing:2px;
+  color:var(--blue);
+  font-weight:700;
+}
+
+.business-card h3{
+  margin:10px 0 4px;
+  color:var(--blue-dark);
+}
+
+.business-card strong{
+  font-size:20px;
+  color:#194f64;
+}
+
+.business-card p{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:5px;
+}
+
+.target{
+  margin-top:18px;
+  padding:28px;
+  background:white;
+  border-radius:20px;
+  border:1px solid var(--line);
+}
+
+.target h3{
+  color:var(--blue-dark);
+  margin-bottom:8px;
+}
+
+.target p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* CONCLUSION */
+
+.conclusion{
+  padding:130px 6%;
+  text-align:center;
+  background:#dff3fa;
+}
+
+.conclusion .section-intro{
+  margin:0 auto;
+}
+
+.quote{
+  margin-top:40px;
+  font-family:"Playfair Display",serif;
+  font-size:28px;
+  color:#17607f;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#123f52;
+  color:white;
+}
+
+.contact .section-label{
+  color:#8bd2ec;
+}
+
+.contact .section-title{
+  color:white;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:45px;
+}
+
+.contact-card{
+  padding:25px;
+  border:1px solid rgba(255,255,255,.13);
+  background:rgba(255,255,255,.06);
+  border-radius:18px;
+}
+
+.contact-card small{
+  display:block;
+  color:#8bd2ec;
+  font-size:9px;
+  letter-spacing:1.5px;
+  margin-bottom:7px;
+}
+
+.contact-card p{
+  font-size:13px;
+}
+
+.footer{
+  margin-top:80px;
+  padding-top:25px;
+  border-top:1px solid rgba(255,255,255,.12);
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  color:rgba(255,255,255,.55);
+}
+
+/* ANIMATION */
+
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+  .navbar{
+    padding:10px 4%;
+  }
+
+  .nav-inner{
+    padding:12px 15px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  section{
+    padding:75px 5%;
+  }
+
+  .hero{
+    min-height:90vh;
+    padding:120px 6% 60px;
+  }
+
+  .hero h1{
+    font-size:52px;
+    letter-spacing:-2px;
+  }
+
+  .hero-desc{
+    font-size:14px;
+  }
+
+  .identity-grid,
+  .product-layout,
+  .concept-grid,
+  .material-grid,
+  .business-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .members{
+    grid-column:auto;
+  }
+
+  .product-layout{
+    gap:40px;
+  }
+
+  .concept-card{
+    min-height:auto;
+  }
+
+  .process-item{
+    grid-template-columns:45px 1fr;
+    gap:12px;
+  }
+
+  .process-item p{
+    grid-column:2;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery img{
+    min-height:240px;
+  }
+
+  .advantage-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer{
+    flex-direction:column;
+    gap:8px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="logo">BEBEÁN • BALI</div>
+
+    <div class="nav-links">
+      <a href="#product">Product</a>
+      <a href="#concept">Concept</a>
+      <a href="#process">Process</a>
+      <a href="#result">Result</a>
+      <a href="#business">Business</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content reveal">
+
+    <div class="eyebrow">
+      PKWU PROJECT • SMAN 6 DENPASAR • 2026
+    </div>
+
+    <h1>
+      Layangan <span>Bebeán</span>
+      Tradisional Khas Bali
+    </h1>
+
+    <p class="hero-desc">
+      Sebuah kerajinan handmade yang mempertahankan karakter
+      layangan tradisional Bali dengan sentuhan inovasi modern
+      melalui sistem knockdown dan pengalaman digital QR Code.
+    </p>
+
+    <div class="hero-meta">
+      <div class="pill">HANDMADE</div>
+      <div class="pill">BALINESE CULTURE</div>
+      <div class="pill">140 CM</div>
+      <div class="pill">KNOCKDOWN SYSTEM</div>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="scroll">SCROLL TO EXPLORE ↓</div>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- IDENTITY -->
+<section class="identity">
+  <div class="container reveal">
+
+    <div class="section-label">01 — Team / Project Identity</div>
+
+    <h2 class="section-title">The Project</h2>
+
+    <p class="section-intro">
+      Produk kerajinan tradisional Bali yang dikembangkan
+      dengan pendekatan handmade dan inovasi modern.
+    </p>
+
+    <div class="identity-grid">
+
+      <div class="info-card">
+        <small>PRODUCT / PROJECT</small>
+        <strong>Layangan Bebeán Tradisional Khas Bali</strong>
+      </div>
+
+      <div class="info-card">
+        <small>TYPE</small>
+        <strong>Traditional Balinese Kite / Handmade Cultural Craft</strong>
+      </div>
+
+      <div class="info-card">
+        <small>SCHOOL</small>
+        <strong>SMAN 6 Denpasar</strong>
+      </div>
+
+      <div class="info-card">
+        <small>PROJECT</small>
+        <strong>PKWU Project 2026</strong>
+      </div>
+
+      <div class="info-card members">
+        <small>MEMBERS</small>
+        <p>A.A. Bagus Khrisna Mataram (02/XII F3)</p>
+        <p>I Wayan Wing Pandu Winata (13/XII F3)</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PRODUCT -->
+<section class="product" id="product">
+  <div class="container product-layout">
+
+    <div class="product-text reveal">
+
+      <div class="section-label">02 — Product</div>
+
+      <h2 class="section-title">
+        The Product
+      </h2>
+
+      <p>
+        Layangan Bebeán adalah salah satu jenis layangan
+        tradisional khas Bali yang memiliki bentuk dan karakter
+        visual yang unik.
+      </p>
+
+      <p>
+        Produk dibuat secara handmade menggunakan rangka bambu
+        dan kain dengan tetap mempertahankan ciri khas layangan
+        Bebeán tradisional.
+      </p>
+
+      <p>
+        Layangan memiliki ukuran sekitar 140 cm (1,4 meter)
+        dan menggunakan sistem knockdown atau bongkar-pasang
+        sehingga lebih praktis untuk disimpan dan dibawa.
+      </p>
+
+      <div class="price">Rp350.000</div>
+
+      <div class="product-tags">
+        <div class="pill">HANDMADE</div>
+        <div class="pill">BALINESE CULTURE</div>
+        <div class="pill">KNOCKDOWN</div>
+        <div class="pill">TRADITIONAL CRAFT</div>
+      </div>
+
+    </div>
+
+    <div class="product-visual reveal">
+      <img src="IMG-20260921-WA0022.jpg" alt="Layangan Bebeán">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONCEPT -->
+<section class="concept" id="concept">
+  <div class="container reveal">
+
+    <div class="section-label">03 — Concept</div>
+
+    <h2 class="section-title">Three Ideas</h2>
+
+    <div class="concept-grid">
+
+      <div class="concept-card">
+        <div class="number">01 — TRADITION</div>
+        <h3>Tradition</h3>
+        <p>
+          Mempertahankan keberadaan layangan tradisional Bali
+          sebagai bagian dari budaya dan kreativitas masyarakat Bali.
+        </p>
+      </div>
+
+      <div class="concept-card">
+        <div class="number">02 — INNOVATION</div>
+        <h3>Innovation</h3>
+        <p>
+          Menggunakan sistem knockdown atau bongkar-pasang
+          agar layangan lebih praktis dalam penyimpanan dan transportasi.
+        </p>
+      </div>
+
+      <div class="concept-card">
+        <div class="number">03 — DIGITAL EXPERIENCE</div>
+        <h3>Digital Experience</h3>
+        <p>
+          Menambahkan QR Code yang menghubungkan produk fisik
+          dengan informasi digital mengenai produk, proses pembuatan,
+          dan nilai budaya layangan Bebeán.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- MATERIAL -->
+<section class="material">
+  <div class="container reveal">
+
+    <div class="section-label">04 — Material</div>
+
+    <h2 class="section-title">What We Used</h2>
+
+    <div class="material-grid">
+
+      <div class="material-card">
+        <span>01 — NATURAL / FRAME</span>
+        <h3>Bamboo</h3>
+        <p>
+          Digunakan sebagai bahan utama untuk membuat
+          rangka layangan.
+        </p>
+      </div>
+
+      <div class="material-card">
+        <span>02 — MAIN MATERIAL</span>
+        <h3>Black Fabric</h3>
+        <p>
+          Digunakan sebagai bagian utama permukaan layangan.
+        </p>
+      </div>
+
+      <div class="material-card">
+        <span>03 — DECORATION</span>
+        <h3>Traditional Stripe Motif</h3>
+        <p>
+          Motif garis khas digunakan untuk memperkuat
+          identitas visual layangan.
+        </p>
+      </div>
+
+      <div class="material-card">
+        <span>04 — CRAFTING</span>
+        <h3>Supporting Materials</h3>
+        <p>
+          Bahan pendukung digunakan untuk menyatukan
+          dan memperkuat bagian-bagian layangan.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container reveal">
+
+    <div class="section-label">05 — Process</div>
+
+    <h2 class="section-title">How It Was Made</h2>
+
+    <div class="process-list">
+
+      <div class="process-item">
+        <div class="process-no">01</div>
+        <h3>Preparing the Bamboo</h3>
+        <p>
+          Memilih dan menyiapkan bambu yang sesuai
+          untuk digunakan sebagai rangka layangan.
+        </p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-no">02</div>
+        <h3>Making the Frame</h3>
+        <p>
+          Bambu dipotong dan dirangkai menjadi kerangka
+          layangan Bebeán dengan ukuran sekitar 140 cm.
+        </p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-no">03</div>
+        <h3>Preparing the Fabric</h3>
+        <p>
+          Kain dipotong dan disiapkan sesuai bentuk rangka layangan.
+        </p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-no">04</div>
+        <h3>Attaching the Fabric</h3>
+        <p>
+          Kain dipasang pada rangka bambu hingga membentuk
+          permukaan layangan.
+        </p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-no">05</div>
+        <h3>Adding the Motif</h3>
+        <p>
+          Motif garis khas ditambahkan untuk memberikan
+          identitas dan nilai estetika pada produk.
+        </p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-no">06</div>
+        <h3>Knockdown System</h3>
+        <p>
+          Bagian rangka dibuat menggunakan sistem bongkar-pasang
+          agar produk lebih mudah disimpan dan dibawa.
+        </p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-no">07</div>
+        <h3>Final Check</h3>
+        <p>
+          Layangan diperiksa kembali untuk memastikan rangka,
+          kain, motif, dan sistem bongkar-pasang berfungsi dengan baik.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- RESULT -->
+<section class="result" id="result">
+  <div class="container reveal">
+
+    <div class="section-label">06 — Final Result</div>
+
+    <h2 class="section-title">The Product</h2>
+
+    <p class="section-intro">
+      Layangan Bebeán handmade dengan rangka bambu,
+      kain hitam bermotif khas, dan sistem knockdown.
+    </p>
+
+    <div class="gallery">
+
+      <img
+        src="IMG-20260921-WA0022.jpg"
+        alt="Hasil akhir Layangan Bebeán"
+      >
+
+      <img
+        class="second"
+        src="IMG-20260921-WA0025.jpg"
+        alt="Detail Layangan Bebeán"
+      >
+
+    </div>
+
+    <div class="result-note">
+      <strong>Ukuran:</strong> 140 cm / 1,4 meter
+      <br>
+      Produk akhir mempertahankan karakter visual layangan
+      Bebeán tradisional sekaligus menggunakan sistem
+      knockdown untuk kepraktisan.
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DOCUMENTATION -->
+<section class="documentation">
+  <div class="container reveal">
+
+    <div class="section-label">07 — Documentation</div>
+
+    <h2 class="section-title">Behind The Process</h2>
+
+    <p class="section-intro">
+      Dokumentasi proses pembuatan Layangan Bebeán secara handmade.
+    </p>
+
+    <div class="video-wrap">
+      <video controls playsinline preload="metadata">
+        <source src="VID-20260921-WA0024.mp4" type="video/mp4">
+        Browser Anda tidak mendukung pemutaran video.
+      </video>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PACKAGING -->
+<section class="packaging">
+  <div class="container reveal">
+
+    <div class="section-label">08 — Packaging</div>
+
+    <h2 class="section-title">Packaging With Purpose</h2>
+
+    <div class="simple-box">
+      <p>
+        Produk menggunakan konsep penyimpanan knockdown atau
+        bongkar-pasang, sehingga bagian rangka dapat dilepas
+        dan disimpan dengan lebih praktis.
+      </p>
+
+      <br>
+
+      <p>
+        Sistem ini membantu mengurangi ruang yang diperlukan
+        saat produk dibawa atau disimpan sekaligus menjaga
+        bagian-bagian layangan agar lebih mudah ditata.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ADVANTAGES -->
+<section class="advantages">
+  <div class="container reveal">
+
+    <div class="section-label">09 — Advantage</div>
+
+    <h2 class="section-title">Our Advantages</h2>
+
+    <p class="section-intro">
+      Perpaduan antara budaya tradisional Bali dan inovasi modern.
+    </p>
+
+    <div class="advantage-grid">
+
+      <div class="advantage">Handmade</div>
+      <div class="advantage">Mengangkat budaya Bali</div>
+      <div class="advantage">Ukuran 140 cm</div>
+      <div class="advantage">Rangka bambu</div>
+      <div class="advantage">Motif khas</div>
+      <div class="advantage">Sistem knockdown / bongkar-pasang</div>
+      <div class="advantage">Praktis untuk penyimpanan dan transportasi</div>
+      <div class="advantage">QR Code sebagai media informasi digital</div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- BUSINESS -->
+<section class="business" id="business">
+  <div class="container reveal">
+
+    <div class="section-label">10 — Business</div>
+
+    <h2 class="section-title">Business Plan</h2>
+
+    <div class="business-grid">
+
+      <div class="business-card">
+        <div class="num">01 / CAPITAL</div>
+        <h3>Initial Capital</h3>
+        <strong>Rp300.000</strong>
+        <p>Modal awal terdiri dari modal pribadi dan kerja sama.</p>
+      </div>
+
+      <div class="business-card">
+        <div class="num">02 / COST</div>
+        <h3>Production Cost</h3>
+        <strong>± Rp187.500 / unit</strong>
+        <p>Perkiraan biaya produksi satu layangan.</p>
+      </div>
+
+      <div class="business-card">
+        <div class="num">03 / PRICE</div>
+        <h3>Selling Price</h3>
+        <strong>Rp350.000</strong>
+        <p>Harga jual satu unit Layangan Bebeán.</p>
+      </div>
+
+      <div class="business-card">
+        <div class="num">04 / PROFIT</div>
+        <h3>Estimated Profit</h3>
+        <strong>± Rp162.500 / unit</strong>
+        <p>Perkiraan keuntungan kotor berdasarkan harga jual dan biaya produksi.</p>
+      </div>
+
+      <div class="business-card">
+        <div class="num">05 / PRODUCTION</div>
+        <h3>Production Target</h3>
+        <strong>12 units / year</strong>
+        <p>Target produksi dalam perencanaan usaha.</p>
+      </div>
+
+      <div class="business-card">
+        <div class="num">06 / REVENUE</div>
+        <h3>Estimated Annual Revenue</h3>
+        <strong>Rp4.200.000</strong>
+        <p>Perkiraan pendapatan dari penjualan 12 unit.</p>
+      </div>
+
+    </div>
+
+    <div class="target">
+      <h3>07 / Target Market</h3>
+      <p>
+        Pecinta layangan, masyarakat Bali, wisatawan,
+        kolektor kerajinan tradisional, serta masyarakat
+        yang tertarik terhadap budaya dan kerajinan khas Bali.
+      </p>
+    </div>
+
+    <div class="target">
+      <h3>08 / Marketing</h3>
+      <p>
+        Instagram / social media • QR Code digital •
+        Promosi langsung • Foto dan video produk • Word of mouth
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONCLUSION -->
+<section class="conclusion">
+  <div class="container reveal">
+
+    <div class="section-label">11 — Conclusion</div>
+
+    <h2 class="section-title">More Than A Kite.</h2>
+
+    <p class="section-intro">
+      Layangan Bebeán bukan hanya sebuah permainan tradisional,
+      tetapi juga merupakan bagian dari identitas dan kreativitas
+      budaya Bali.
+      <br><br>
+      Melalui produk ini, kami berusaha mempertahankan nilai
+      tradisional sekaligus memberikan inovasi melalui sistem
+      knockdown dan media digital QR Code.
+      <br><br>
+      Produk ini diharapkan dapat menjadi contoh bahwa kerajinan
+      tradisional dapat terus berkembang dan tetap relevan
+      di era modern.
+    </p>
+
+    <div class="quote">
+      “TRADITION IN THE SKY.”
+    </div>
+
+    <p style="margin-top:8px;color:#64808c;font-size:12px;">
+      A Traditional Balinese Kite with a Modern Touch.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container reveal">
+
+    <div class="section-label">12 — Contact</div>
+
+    <h2 class="section-title">Get In Touch</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <small>LOCATION</small>
+        <p>Bali, Indonesia</p>
+      </div>
+
+      <div class="contact-card">
+        <small>INSTAGRAM</small>
+        <p>@gungbgs09</p>
+      </div>
+
+      <div class="contact-card">
+        <small>WHATSAPP</small>
+        <p>+6281939478320</p>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <span>LAYANGAN BEBEÁN • PKWU PROJECT 2026</span>
+      <span>SMAN 6 DENPASAR</span>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold:0.12
+  }
+);
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
